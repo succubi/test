@@ -1,0 +1,23 @@
+<h1>Listing modulls</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @modulls.each do |modull| %>
+  <tr>
+    <td><%= modull.name %></td>
+    <td><%= link_to 'Show', modull %></td>
+    <td><%= link_to 'Edit', edit_modull_path(modull) %></td>
+    <td><%= link_to 'Destroy', modull, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Modull', new_modull_path %>
